@@ -1,9 +1,14 @@
 import './App.css'
+import Container from './Components/Container'
+import Note from './Components/Notes'
 
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+    <Container>
+    <h1 className='text-3xl font-bold text-center my-5'>Notes App</h1>
+      <Note />
+    </Container>
     </>
   )
 }
