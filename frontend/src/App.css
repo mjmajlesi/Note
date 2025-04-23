@@ -1,6 +1,7 @@
 @import "tailwindcss";
 body{
-    font-family: Arial, sans-serif;
+    font-family: Lexend, sans-serif;
     color: #e5e8ef ;
     background-color: #020c22;
+    background-image: url("https://www.transparenttextures.com/patterns/subtle-dots.png");
 }
