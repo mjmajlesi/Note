@@ -1,15 +1,20 @@
 import './App.css'
 import Container from './Components/Container'
-import Note from './Components/Notes'
+import Home from './Components/Home'
+import Note from './Components/Note'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-    <Container>
-    <h1 className='text-3xl font-bold text-center my-5'>Notes App</h1>
-      <Note />
-    </Container>
-    </>
+    <Router>
+      <Container>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/notes' element={<Home />} />
+          <Route path='/notes/:id' element={<Note />} />
+        </Routes>
+      </Container>
+    </Router>
   )
 }
 
