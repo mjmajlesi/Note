@@ -2,16 +2,12 @@ import React from 'react'
 import { INote } from './Home'
 import { MdEditNote } from "react-icons/md";
 import { AiTwotoneDelete } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link,  NavLink } from 'react-router-dom';
 
 
 function Notes({ body, created, id, updated }: INote) {
-    const toNotes = (id: number) => {
-        <Link to={`/notes/${id}`}></Link>
-    }
-
     return (
-            <div onClick={() => toNotes(id)} className='note w-full bg-[#485063] rounded-lg shadow-lg p-4'>
+            <NavLink to={`/notes/${id}`} className='note w-full bg-[#485063] rounded-lg shadow-lg p-4'>
                 <div className='flex justify-between items-center py-4'>
                     <h1 className='font-bold text-3xl text-[#ebedf1]'>Title {id}</h1>
                     <div className='flex gap-2'>
@@ -24,7 +20,7 @@ function Notes({ body, created, id, updated }: INote) {
                     <p className='text-base font-medium'>Created : {created}</p>
                     <p className='text-base font-medium'>Updated : {updated}</p>
                 </div>
-            </div>
+            </NavLink>
     )
 }
 export default Notes

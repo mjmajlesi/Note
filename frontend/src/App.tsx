@@ -3,6 +3,7 @@ import Container from './Components/Container'
 import Home from './Components/Home'
 import Note from './Components/Note'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import UpdateNote from './Components/UpdateNote'
 
 function App() {
   return (

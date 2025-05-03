@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { INote } from './Home'
 import { useParams } from 'react-router-dom'
 import Notes from './Notes'
+import NotePage from './NotePage'
 
 function Note() {
     const params = useParams()
@@ -21,7 +22,7 @@ function Note() {
   
     return (
     <div>
-        {note ? <Notes {...note} /> : <p>Loading...</p>}
+        {note ? <NotePage {...note} /> : <p>Loading...</p>}
     </div>
   )
 }
